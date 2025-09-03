@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kawaharadaryou <kawaharadaryou@student.    +#+  +:+       +#+        */
+/*   By: rkawahar <rkawahar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 00:31:04 by kawaharadar       #+#    #+#             */
-/*   Updated: 2025/09/04 00:28:34 by kawaharadar      ###   ########.fr       */
+/*   Updated: 2025/09/04 01:58:56 by rkawahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,11 @@ int main(void) {
         std::cout << "test3 : " << test3 << std::endl;
         std::cout << std::endl;
 
-        std::cout << "test7: check exception error" << std::endl;
+		std::cout << "test8: const check" << std::endl;
+		const Array<int> test6(3);
+		std::cout << test6 << std::endl;
+
+        std::cout << "test9: check exception error" << std::endl;
             std::cout << test2[10] << std::endl;
     } catch (std::exception &e) {
         std::cout << e.what() << std::endl;

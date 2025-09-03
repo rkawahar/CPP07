@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.tpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kawaharadaryou <kawaharadaryou@student.    +#+  +:+       +#+        */
+/*   By: rkawahar <rkawahar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 12:16:16 by kawaharadar       #+#    #+#             */
-/*   Updated: 2025/09/04 00:06:18 by kawaharadar      ###   ########.fr       */
+/*   Updated: 2025/09/04 01:52:57 by rkawahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,19 @@ Array<T>& Array<T>::operator=(const Array& other) {
 }
 
 template<typename T>
-T& Array<T>::operator[](unsigned int num) const {
+T& Array<T>::operator[](unsigned int num) {
 	if (num >= _num)
 		throw std::out_of_range("Index error : Index is out of range.");
 	return (_arr[num]);
 }
+
+template<typename T>
+const T& Array<T>::operator[](unsigned int num) const {
+	if (num >= _num)
+		throw std::out_of_range("Index error : Index is out of range.");
+	return (_arr[num]);
+}
+
 
 template <typename T>
 unsigned int Array<T>::size(void) const {

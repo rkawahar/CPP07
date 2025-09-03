@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kawaharadaryou <kawaharadaryou@student.    +#+  +:+       +#+        */
+/*   By: rkawahar <rkawahar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 00:31:31 by kawaharadar       #+#    #+#             */
-/*   Updated: 2025/02/23 12:37:51 by kawaharadar      ###   ########.fr       */
+/*   Updated: 2025/09/04 01:59:52 by rkawahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ class Array {
 		Array(const Array &other);
 		Array& operator=(const Array& other);
 
-	T& operator[](unsigned int num) const;
+	T& operator[](unsigned int num);
+	const T& operator[](unsigned int num) const;
 	unsigned int size(void) const;
 };
 
